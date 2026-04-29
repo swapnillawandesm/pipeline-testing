@@ -3,14 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto21
-    commands:
-      - echo "Installing dependencies..."
+      java: corretto17
 
   build:
     commands:
-      - echo "Building Spring Boot application..."
-      - mvn clean package -DskipTests
+      - echo "Building Spring Boot app..."
+      - chmod +x mvnw
+      - ./mvnw clean package -DskipTests
 
 artifacts:
   files:
